@@ -1,0 +1,30 @@
+#app {
+  .navbar {
+    @media (min-width: 768px) {
+      border-radius: 0;
+    }
+    &-brand {
+      background: transparent url(../../assets/apple_large.svg) no-repeat center;
+      @media (max-width: 767px) {
+        margin-left: 15px;
+      }
+    }
+    &-form {
+      .form-group {
+        position: relative;
+        input {
+          border-radius: 0;
+          padding-right: 50px;
+        }
+      }
+      button {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+      }
+    }
+  }
+}

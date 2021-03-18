@@ -1,0 +1,22 @@
+<div class="d-flex flex-wrap content-center">
+  <!--looping through allresults-->
+  <div class="search-tile row-eq-height" v-for="item in allResults[section]" :key="item.id">
+    <div class="search-tile-body">
+      <div class="search-tile-image">
+        <img :src="item.artwork" />
+        <a class="favourites" href="javascript:void(0)" @click="bookmarkFavourites(item.id)">
+          <i class="glyphicon glyphicon-heart bookmarked" v-if="item.isBookmarked"></i>
+          <i class="glyphicon glyphicon-heart" v-else></i>
+        </a>
+      </div>
+      <div class="bottom-section">
+        <span class="bottom-section-type">
+          {{item.genre}}
+        </span>
+        <a :href="item.url">
+          <b>{{item.name}}</b>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

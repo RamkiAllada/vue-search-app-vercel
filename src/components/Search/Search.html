@@ -1,0 +1,7 @@
+<!-- search form to search the result-->
+<form class="navbar-form navbar-right" @submit.prevent="searchData">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search" v-model="searchTerm" v-on:input="searchTerm= $event.target.value" autocomplete="false" data-search="search">
+    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+  </div>
+</form>

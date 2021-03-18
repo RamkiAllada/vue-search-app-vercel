@@ -1,0 +1,21 @@
+<div class="mainWrapper">
+<!--checking if results are available-->
+  <template v-if="sections.length>0">
+    <!--looping all the sections -->
+    <template v-for="section in sections">
+      <div>
+        <section>
+          <!--condition to display only if the section results are present-->
+          <h2 v-if="allResults[section] && allResults[section].length>0">{{section}}</h2>
+          <!--search tile accepting the section name as prop-->
+          <search-tile :section="section"/>
+        </section>
+      </div>
+    </template>
+  </template>
+  <!--if results are empty -->
+  <template v-else>
+    No Results found
+  </template>
+</div>
+
